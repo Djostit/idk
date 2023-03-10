@@ -31,50 +31,122 @@ box-shadow: 0 0 3px black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align:center;
     align-items: center;
     border: 1px solid black;
 }
+
+/* .foo { 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    width: 10%; 
+    height: 40%;
+    top: 0; left: 50%; bottom: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    display: block;
+    transform-origin: -200% center;
+    animation: circle 4s infinite linear;
+  
+} */
 .foo {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: red;
-    animation: changeFoo 5s infinite;
+    animation: changeFoo 5s infinite linear, rainbow-bg 10s infinite linear;
+}
+.baz{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: purple;
+    position: relative;
+    left: 20%;
+    margin: auto;
+    transform-origin: -50% center;
+    animation: circle 2s infinite linear, rainbow-bg 20s infinite linear;
 }
 .bar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: blue;
-    animation: changeBar 5s infinite;
+    animation: changeBar 5s infinite linear, rainbow-bg 15s infinite linear;
+}
+
+@keyframes circle {
+    to { transform: rotate(-1turn); }
 }
 
 @keyframes changeFoo {
-    0% {
+    0%, 100% {
         transform: translateX(-200%);
     }
-    50% {
+    25% {
         transform: translateX(200%);
     }
-    75% {
+    50% {
         transform: translateX(200%) translateY(400%);
     }
-    100% {
+    75% {
         transform: translateX(-200%) translateY(400%);
     }
 }
 
 @keyframes changeBar {
-    0% {
+    0%, 100% {
         transform: translateX(200%);
     }
-    50% {
+    25% {
         transform: translateX(-200%);
     }
-    75% {
+    50% {
         transform: translateX(-200%) translateY(-400%);
     }
-    100% {
+    75% {
         transform: translateX(200%) translateY(-400%);
+    }
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
     }
 }
