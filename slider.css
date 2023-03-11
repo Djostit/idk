@@ -1,0 +1,144 @@
+.slider {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.sliders {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+.slide {
+    width: 25%;
+    height: 100%;
+}
+.slide > .slide__header {
+    text-align: center;
+    height: 5%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.slide > img {
+    height: 95%;
+    width: 100%;
+}
+
+.s1 {
+    animation: sliderss 10s infinite;
+}
+
+@keyframes sliderss {
+    0%, 20%, 100% {
+        transform: translateX(-0%);
+    }
+    25%, 45% {
+        transform: translateX(-25%);
+    }
+    50%, 70%{ 
+        transform: translateX(-50%);
+    }
+    75%, 95% {
+        transform: translateX(-75%);
+    }
+}
+
+@keyframes sliderss {
+    0%, 20%, 100% {
+        margin-left: -0%;
+    }
+    25%, 45% {
+        margin-left: -25%;
+    }
+    50%, 70%{ 
+        margin-left: -50%;
+    }
+    75%, 95% {
+        margin-left: -75%;
+    }
+}
+.rabbit {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    animation: jump 10s infinite;
+}
+
+.year {
+    display: flex;
+}
+.year__left {
+    width: 20px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.year__right {
+    width: 20px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.head {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.body {
+    width: 50px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.hand {
+    display: flex;
+}
+
+.hand__left {
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.hand__right {
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.feet {
+    display: flex;
+}
+
+.feet__left {
+    width: 40px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.feet__right {
+    width: 40px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+@keyframes jump {
+    0%,100% {
+        transform: translateX(0%);
+    }
+    25%,50% {
+        transform: translateX(200%) rotate(-1turn);
+    }
+}
